@@ -85,11 +85,20 @@ namespace FileIO
 
             File.AppendAllText(path1, data1Append);
             File.AppendAllLines(path2, data2Append);
+            Console.ReadKey();
 
 
+            Console.WriteLine("===============FILE MANIPULATION ==============");
+            string path3 = @"C:\Users\HP\Desktop\TestWriteAll.txt";
+            string path4 = @"C:\Users\HP\Documents\TestWriteLine.txt";
+            bool overwrite = true;
+            File.Copy(path3, path4, overwrite);
 
-
-
+            File.Delete(path);
+            File.Delete(path1);
+            File.Delete(path2);
+            File.Delete(path3);
+            File.Delete(path4);
 
         }
 
